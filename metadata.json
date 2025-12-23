@@ -1,0 +1,5 @@
+{
+  "name": "WheelWise - Options Strategy Tracker",
+  "description": "A comprehensive logbook and analysis tool for the Options Wheel Strategy, tracking CSPs, Covered Calls, assigned positions, and AI-driven trade analysis.",
+  "requestFramePermissions": []
+}
