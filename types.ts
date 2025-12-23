@@ -13,12 +13,19 @@ export enum TradeStatus {
   ROLLED = 'Rolled'
 }
 
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
 export interface Trade {
   id: string;
+  userId: string;
   ticker: string;
   type: TradeType;
   strikePrice: number;
-  premium: number; // Net premium collected per share (e.g. 1.50)
+  premium: number;
   contracts: number;
   expiryDate: string;
   entryDate: string;
@@ -30,9 +37,9 @@ export interface Trade {
 export interface PortfolioPosition {
   ticker: string;
   shares: number;
-  averagePrice: number; // Original assignment strike
+  averagePrice: number;
   totalPremiumCollected: number;
-  currentCostBasis: number; // (AvgPrice * Shares - TotalPremium) / Shares
+  currentCostBasis: number;
 }
 
 export interface DashboardStats {
